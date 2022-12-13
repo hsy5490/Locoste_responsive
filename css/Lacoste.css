@@ -215,8 +215,7 @@ input::placeholder {
 .banner {
     width: 100%;
     height: 600px;
-
-    z-index: 1;
+    /* z-index: 1;   */
     /* transform: translate(-100vw); */
     transition: all 0.3s;
 }
@@ -224,15 +223,16 @@ input::placeholder {
 .main_banner {
     width: 100%;
     height: 600px;
-    /* overflow: hidden;
-    display: flex;
-    flex-flow: row nowrap;
-    position: relative; */
+    position: relative;
 }
 
 .main_banner2 {
     width: 100%;
-    position: relative;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 
 .banner_description {
@@ -262,9 +262,10 @@ input::placeholder {
 }
 
 
-.main_banner2:last-child{
-    display: none;
+.main_banner2:last-child {
+    /* display: none; */
 }
+
 .main_banner2:last-child h2 {
     font-size: 2.6rem;
     font-weight: 500;
@@ -291,6 +292,10 @@ input::placeholder {
     color: #fff;
 }
 
+.showing{
+    z-index: 1;
+    opacity: 1;
+}
 
 /* best */
 .best {
@@ -327,6 +332,18 @@ input::placeholder {
     color: #DFD3D3;
 }
 
+
+.best_img_bg{
+    overflow: hidden;
+}
+
+.best_img_bg:hover img{
+    transform: scale(1.1);
+}
+.best_img_bg img{
+    transition: all 0.5s;
+}
+
 /* .best_menu_item.active {
     color: #000;
 } */
@@ -342,12 +359,13 @@ input::placeholder {
     position: relative;
 }
 
-.best_description ul li .best_img_bg img {
+/* .best_description ul li .best_img_bg img {
     margin-bottom: 24px;
-}
+} */
 
 .best_description ul li h2 {
     margin-bottom: 12px;
+    margin-top: 24px;
     color: #555252;
 }
 
@@ -617,6 +635,7 @@ input::placeholder {
 .video #l005_btn i {
     color: #fff;
     font-size: 60px;
+    cursor: pointer;
 }
 
 
