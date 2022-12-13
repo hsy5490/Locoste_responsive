@@ -11,11 +11,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// slide_banner
-const banner=document.querySelector('.main_banner');
-
-
-
 // best item tab
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
