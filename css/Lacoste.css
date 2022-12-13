@@ -591,30 +591,30 @@ input::placeholder {
 }
 
 /* video */
-.l005_video {
+.video {
     position: relative;
     margin-left: 40px;
     margin-top: 60px;
 }
 
-.l005_video video {
+.video video {
     width: 620px;
     height: 300px;
 }
 
-.l005_video video source {
+.video video source {
     width: 620px;
     height: 300px;
 }
 
-.l005_video #l005_btn {
+.video #l005_btn {
     position: absolute;
     border: none;
     top: 120px;
     left: 280px;
 }
 
-.l005_video #l005_btn i {
+.video #l005_btn i {
     color: #fff;
     font-size: 60px;
 }

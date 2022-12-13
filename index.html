@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
     <link rel="stylesheet" href="./css/Lacoste.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </head>
 
 <body style="overflow-y: scroll;">
@@ -167,7 +168,6 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
         <section id="section">
             <article class="best w1280">
@@ -421,17 +421,16 @@
                         <img src="./images/video_thumnail.png" alt="">
                     </div>
                 </div>
-
-                <div class="l005_video">
-                    <video preload="metadata" id="l005_video" poster="./images/video_poster.png">
-                        <source src="./media/video.mp4" type="video/mp4">
-                    </video>
-                    <!-- Video 제어버튼 -->
+                <h2 class="video">
+                    <figure>
+                        <video muted id="l005_video" poster="./images/video_poster.png">
+                            <source src="./media/video.mp4" type="video/mp4">
+                        </video>
+                    </figure>
                     <button id="l005_btn">
                         <i class="fa fa-play-circle-o" aria-hidden="true"></i>
                     </button>
-                    <!-- /Video 제어버튼 -->
-                </div>
+                </h2>
             </article>
             <article class="sale">
                 <div class="sale_w1280 w1280">
