@@ -12,26 +12,26 @@ document.addEventListener('scroll', () => {
 });
 
 // slider banner
-const showing_class="showing";
-const firstSlide=document.querySelector(".main_banner2:first-child");
-function slide(){
-  const currentSlide=document.querySelector(`.${showing_class}`);
-  if(currentSlide){
-    currentSlide.classList.remove(showing_class);
-    const nextSlide=currentSlide.nextElementSibling;
-    if(nextSlide){
-      nextSlide.classList.add(showing_class);
-    }else{
-      firstSlide.classList.add(showing_class);
-    }
-  }else{
-    firstSlide.classList.add(showing_class);
-  }
+// const showing_class="showing";
+// const firstSlide=document.querySelector(".main_banner2:first-child");
+// function slide(){
+//   const currentSlide=document.querySelector(`.${showing_class}`);
+//   if(currentSlide){
+//     currentSlide.classList.remove(showing_class);
+//     const nextSlide=currentSlide.nextElementSibling;
+//     if(nextSlide){
+//       nextSlide.classList.add(showing_class);
+//     }else{
+//       firstSlide.classList.add(showing_class);
+//     }
+//   }else{
+//     firstSlide.classList.add(showing_class);
+//   }
 
-  const goSlide=document.querySelector
-}
-slide();
-setInterval(slide,2000)
+//   const goSlide=document.querySelector
+// }
+// slide();
+// setInterval(slide,2000)
 
 // best item tab
 const tabs = document.querySelectorAll('[data-tab-target]')
