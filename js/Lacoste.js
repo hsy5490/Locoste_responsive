@@ -27,6 +27,8 @@ function slide(){
   }else{
     firstSlide.classList.add(showing_class);
   }
+
+  const goSlide=document.querySelector
 }
 slide();
 setInterval(slide,2000)
