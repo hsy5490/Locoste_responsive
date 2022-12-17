@@ -1,35 +1,26 @@
 'use strict';
 
 // header fixed scroll color white
-const header=document.querySelector("header");
+const header=document.querySelector("#nav");
 const headerHeight = header.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     if (window.scrollY > headerHeight) {
-        header.classList.add('header-dark');
+        header.classList.add('nav-dark');
     } else {
-        header.classList.remove('header-dark');
+        header.classList.remove('nav-dark');
     }
 });
 
 // slider banner
-const showing_class="showing";
-const firstSlide=document.querySelector(".main_banner2:first-child");
-function slide(){
-  const currentSlide=document.querySelector(`.${showing_class}`);
-  if(currentSlide){
-    currentSlide.classList.remove(showing_class);
-    const nextSlide=currentSlide.nextElementSibling;
-    if(nextSlide){
-      nextSlide.classList.add(showing_class);
-    }else{
-      firstSlide.classList.add(showing_class);
-    }
-  }else{
-    firstSlide.classList.add(showing_class);
-  }
-}
-slide();
-setInterval(slide,2000)
+const main_bnr = document.querySelectorAll('.banner .main_banner')
+let num = 0
+console.log(main_bnr)
+setInterval(function(){
+    for(let j of main_bnr){j.style.opacity='0'}
+    num++
+    if(num>1){num=0}
+    main_bnr[num].style.opacity='1'
+},3000)
 
 // best item tab
 const tabs = document.querySelectorAll('[data-tab-target]')
@@ -70,8 +61,11 @@ btn.click(function(){
 });
 
 // hamburger
-const navbarMenu = document.querySelector('.gnb_menu');
-const navbarToggleBtn = document.querySelector(".gnb_toggle-btn");
-navbarToggleBtn.addEventListener('click', () => {
-    navbarMenu.classList.toggle('open');
+const menu = document.querySelector('.gnb_center');
+const icon = document.querySelector('.icon');
+const ham= document.querySelector(".gnb_toggle-btn");
+
+ham.addEventListener('click', ()=>{
+  menu.classList.toggle('active');
+  icon.classList.toggle('active');
 })
