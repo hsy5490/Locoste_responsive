@@ -796,22 +796,22 @@ body {
     
     .main_banner_description1:last-child {
         position: absolute;
-        bottom: 5%;
+        top: 75%;
         left: 5%;
     }
     
-    .main_banner_description2:last-child p {
+    .main_banner_description1:last-child p {
         font-size: 1.25rem;
         line-height: 30px;
         font-weight: 500;
         margin-bottom: 8px;
     }
     
-    .main_banner_description2:last-child p span {
+    .main_banner_description1:last-child p span {
         font-weight: 700;
     }
     
-    .main_banner_description2:last-child a {
+    .main_banner_description1:last-child a {
         font-size: 0.75rem;
         color: #fff;
         margin-top: 4px;
@@ -822,6 +822,7 @@ body {
     .main_banner_description2:first-child {
         position: absolute;
         bottom: 10%;
+        left: 5%;
     }
     
     .main_banner_description2:first-child p {
