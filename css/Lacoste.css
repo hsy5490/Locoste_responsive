@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 66.6%;
     margin: 0 auto;
 }
 
@@ -218,7 +218,7 @@ body {
     color: #fff;
     font-weight: 400;
     line-height: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .main_banner_description1 a {
@@ -243,7 +243,7 @@ body {
 .main_banner_description2 p:nth-child(2) {
     font-size: 2rem;
     line-height: 48px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .main_banner_description2 p:nth-child(2) span {
@@ -257,12 +257,72 @@ body {
     background-color: #000;
 }
 
+/* section */
 #section {
     margin-top: 120px;
 }
 
 /* best */
+.best_title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
+.best_title h2 {
+    font-size: 1.875rem;
+}
+
+.best_title ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 3px 0 0 60px;
+    color: #DFD3D3;
+
+}
+
+.best_title ul li {
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.best_item ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.best_item ul li {
+    width: 25%;
+}
+
+.best_img_bg {
+    overflow: hidden;
+}
+
+.best_img_bg a:hover img {
+    transform: scale(1.1);
+}
+
+.best_img_bg img {
+    transition: all 0.5s;
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+}
+
+.best_item ul li h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.best_item ul li p {
+    font-size: 1.31rem;
+    font-weight: 500;
+}
 
 .best_description:nth-child(4) ul li:nth-child(3) p span {
     font-size: 0.5rem;
@@ -270,6 +330,7 @@ body {
     color: #C1BCBC;
 }
 
+/* tab 클릭하면 다른 메뉴로 이동 */
 .best_title ul li.active {
     color: black;
 }
