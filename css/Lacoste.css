@@ -21,7 +21,7 @@ body {
 /* nav */
 #nav {
     margin: auto;
-    padding: 13px 0;
+    /* padding: 13px 0; */
     background-color: #fff;
     position: sticky;
     top: 0;
@@ -33,9 +33,10 @@ body {
 .gnb {
     display: flex;
     flex-flow: row nowrap;
+    gap: 0 120px;
     justify-content: space-between;
     align-items: center;
-
+    padding: 28px;
 }
 
 #nav:hover {
@@ -67,7 +68,7 @@ body {
 }
 
 .gnb_title {
-    margin-right: 24px;
+    padding: 8px 12px;
 }
 
 .gnb_title {
@@ -100,7 +101,6 @@ body {
 
 .gnb_title {
     display: inline-block;
-    padding: 24px 0;
 }
 
 .gnb_title:hover {
@@ -177,18 +177,12 @@ body {
 
 /* main_banner */
 .banner {
-    width: 100vw;
-    /* transform: translate(-100vw); */
-    transition: all 0.3s;
-    /* background-color: #067456; */
-    /* height: 600px; */
-    /* z-index: -1; */
-    /* position: relative;
-    top: 0; */
+    width: 100%;
     height: 600px;
+    transition: all 0.3s;
 }
 
-.main_banner {
+.banner a .main_banner {
     /* z-index: -1; */
     /* height: 600px; */
     width: 100%;
@@ -197,63 +191,48 @@ body {
     height: 600px;
 }
 
-.main_banner:first-child {
+a:first-child .main_banner {
     background: url(../images/main_banner.png) center/cover no-repeat;
 }
 
-.main_banner:last-child {
+a .main_banner .main_banner_description {
+    padding: 230px 320px;
+}
+
+a:nth-child(2) .main_banner {
     background: url(../images/main_banner2.png) center/cover no-repeat;
 }
 
-.main_banner_description1 {
-    position: absolute;
-    right: 20%;
-    top: 35%;
-}
-
-.main_banner_description1 p {
-    font-size: 4rem;
+a:nth-child(1) .main_banner_description h2 {
+    font-size: 2.25rem;
+    font-family: 'roboto', sans-serif;
     color: #fff;
-    font-weight: 400;
-    line-height: 80px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
-.main_banner_description1 a {
-    font-size: 1.25rem;
-    padding: 6px 23px;
-    background-color: #000;
-    color: #fff;
+a:nth-child(1) .main_banner_description p {
+    font-size: 2.5rem;
+    line-height: 56px;
+    font-weight: 500;
 }
 
-
-.main_banner_description2 {
-    position: absolute;
-    top: 40%;
-}
-
-.main_banner_description2 p:first-child {
+a:nth-child(2) .main_banner .main_banner_description p:first-child {
     color: #067456;
     font-size: 1.5rem;
     margin-bottom: 12px;
 }
 
-.main_banner_description2 p:nth-child(2) {
+a:nth-child(2) .main_banner .main_banner_description p:last-child {
     font-size: 2rem;
     line-height: 48px;
     margin-bottom: 24px;
-}
-
-.main_banner_description2 p:nth-child(2) span {
     font-weight: 500;
 }
 
-.main_banner_description2 a {
-    color: #fff;
-    font-size: 1.25rem;
-    padding: 6px 20px;
-    background-color: #000;
+a:nth-child(2) .main_banner .main_banner_description p span {
+    font-weight: 700;
 }
+
 
 /* section */
 #section {
@@ -329,24 +308,6 @@ body {
     color: #C1BCBC;
 }
 
-/* center_banner */
-.center_banner {
-    margin-top: 120px;
-    /* width: 100%; */
-    height: 200px;
-    background: url('../images/center_banner.png') center/cover no-repeat;
-    padding: 65px 285px;
-}
-
-.center_banner h2{
-    font-size: 1.875rem;
-    margin-bottom: 8px;
-}
-.center_banner p{
-    font-size: 1.25rem;
-    font-weight: 300;
-}
-
 /* tab 클릭하면 다른 메뉴로 이동 */
 .best_title ul li.active {
     color: black;
@@ -360,23 +321,29 @@ body {
     display: block;
 }
 
-.promotion {
-    background-color: #83C18E;
+
+/* center_banner */
+.center_banner {
+    margin-top: 120px;
+    /* width: 100%; */
+    height: 200px;
+
 }
 
-.promotion .container {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    gap: 0 40px;
+.center_banner a .container {
+    background: url('../images/center_banner.png') center/cover no-repeat;
+    padding: 65px 285px;
 }
 
-.promotion_description {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: space-around
+.center_banner h2 {
+    font-size: 1.875rem;
+    margin-bottom: 8px;
 }
 
+.center_banner p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
 
 /* sale */
 .sale {
@@ -422,6 +389,205 @@ body {
     color: #C1BCBC;
 }
 
+/* promotion */
+.promotion {
+    background-color: #ABCBB0;
+    margin-top: 120px;
+}
+
+.promotion .container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0 40px;
+    /* padding-top: 60px; */
+}
+
+.promotion .container img {
+    display: block;
+    /* padding-bottom: 60px; */
+    width: 50%;
+}
+
+/* .promotion_description {
+    margin-top: 70px;
+} */
+
+.promotion_description h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 40px;
+}
+
+.promotion_description p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 24px;
+}
+
+.promotion a {
+    padding: 6px 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* collection */
+.collection {
+    margin-top: 120px;
+}
+
+.collection_title {
+    margin-bottom: 32px;
+}
+
+.collection_title h2 {
+    font-family: 'roboto', sans-serif;
+    line-height: 48px;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.collection_title p {
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+}
+
+.collection .flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.collection_img {
+    overflow: hidden;
+}
+
+.collection_description h2 {
+    font-family: 'roboto', sans-serif;
+    font-size: 1.875rem;
+    margin: 36px 0 8px 0;
+}
+
+.collection_description p {
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+
+.collection_description>a {
+    font-size: 0.75rem;
+    padding: 12px 20px;
+    border: 1px solid #000;
+}
+
+.collection_description a:hover {
+    border: none;
+    background-color: #067456;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.collection_img img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+/* sports */
+.sports {
+    margin-top: 138px;
+    background-color: #F8F8F8;
+    padding: 40px 0 60px;
+}
+
+.sports .container h2 {
+    font-size: 2rem;
+    padding-left: 24px;
+}
+
+.sports h2 span {
+    color: #067456;
+}
+
+.sports_contents {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 36px;
+}
+
+.sports_contents a {
+    display: block;
+    position: relative;
+}
+
+.info {
+    background: rgba(0, 0, 0, 0.5);
+    width: 290px;
+    height: 290px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    border-radius: 50%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.sports_contents a:hover .info {
+    opacity: 1;
+}
+
+.info span {
+    font-size: 1.75rem;
+    /* 28pt */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.info .view {
+    font-size: 0.938rem;
+    /* 15pt */
+    border: 1px solid #fff;
+    padding: 7px 28px;
+    margin-top: 30px;
+}
+
+/* sns */
+.sns {
+    /* max-width: 60%;
+    margin: 0 auto; */
+    margin-top: 120px;
+}
+
+.sns h2 {
+    font-size: 2rem;
+    padding-left: 24px;
+}
+
+.sns h2 span {
+    color: #067456;
+}
+
+.sns_contents {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+video {
+    width: 47%;
+}
+
+.insta {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px 0;
+}
 
 /* Footer */
 .footer {
@@ -486,14 +652,8 @@ body {
 
 @media screen and (max-width:1023px) {
     .container {
-        max-width: 90%;
+        max-width: 94%;
         margin: 0 auto;
-    }
-
-    #nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px 24px;
     }
 
     #nav h1 img {
@@ -501,7 +661,9 @@ body {
     }
 
     .gnb {
-        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 0px;
     }
 
     .gnb_center {
@@ -511,19 +673,16 @@ body {
         display: none;
     }
 
-    .gnb_center li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .gnb_menu:hover .inner_menu {
-        display: none;
-    }
-
     .icon {
         display: flex;
         padding-left: 0;
         display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .icon li {
+        padding: 8px 12px;
     }
 
     .gnb_toggle-btn {
@@ -540,70 +699,53 @@ body {
         height: 240px;
     }
 
-    .main_banner {
+    .banner a .main_banner {
         height: 240px;
     }
 
-    /* .main_banner:first-child {
-        background: url(../images/main_banner_tablet.png) center/cover no-repeat;
+    a .main_banner .main_banner_description {
+        padding: 76px 130px;
     }
 
-    .main_banner:last-child {
-        background: url(../images/main_banner2_tablet.png) center/cover no-repeat;
-    } */
-
-    .main_banner_description1 {
-        position: absolute;
-        top: 30%;
-        right: 20%;
-    }
-
-    .main_banner_description1 p {
-        font-size: 1.875rem;
-        color: #fff;
-        font-weight: 400;
-        line-height: 40px;
+    a:nth-child(1) .main_banner_description h2 {
+        font-size: 1rem;
         margin-bottom: 12px;
     }
 
-    .main_banner_description1 a {
-        padding: 6px 20px;
-        background-color: #000;
-        color: #fff;
-        font-size: 0.75rem;
+    a:nth-child(1) .main_banner_description p {
+        font-size: 1.25rem;
+        line-height: 32px;
     }
 
-    .main_banner_description2 {
-        position: absolute;
-        top: 30%;
-    }
-
-    .main_banner_description2 p:first-child {
-        color: #067456;
+    a:nth-child(2) .main_banner .main_banner_description p:first-child {
         font-size: 1rem;
         margin-bottom: 8px;
     }
 
-    .main_banner_description2 p:nth-child(2) {
+    a:nth-child(2) .main_banner .main_banner_description p:last-child {
         font-size: 1.25rem;
         line-height: 32px;
-        margin-bottom: 12px;
     }
 
-    .main_banner_description2 a {
-        font-size: 0.75rem;
+    .best {
+        justify-content: center;
+        padding-left: 10px;
     }
 
     .best_item ul {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         /* gap: 24px; */
         gap: 40px 0;
     }
 
     .best_item ul li {
         width: 50%;
+    }
+
+    .best_img_bg img {
+        width: 45vw;
     }
 
     .best_item ul li h2 {
@@ -614,20 +756,175 @@ body {
         font-size: 1.125rem;
     }
 
+    .center_banner {
+        height: 120px;
+    }
+
+    .center_banner a .container {
+        height: 120px;
+        padding: 35px 120px;
+    }
+
+    .center_banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .center_banner p {
+        font-size: 1rem;
+    }
+
+    .sale {
+        margin-top: 120px;
+        padding-left: 10px;
+    }
+
+    .sale_flex {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 40px 0;
+    }
+
+    .sale_description {
+        width: 50%;
+    }
+
+    .sale_description img {
+        width: 45vw;
+    }
+
+    .promotion .container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .promotion .container img {
+        width: 50%;
+    }
+
+    /* .promotion .container .promotion_description {
+        margin-top: -70px;
+    } */
+
+    .promotion {
+        margin-top: 120px;
+    }
+
+    .promotion .container {}
+
+    .promotion .container h2 {
+        font-size: 1.5rem;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+
+    .promotion .container p {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .collection .flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .collection_title {
+        margin-top: 120px;
+    }
+
+    .collection_description {
+        padding-left: 25%;
+    }
+
+    .collection_description {
+        /* display: flex;
+       justify-content: center; */
+    }
+
+    .collection_description:not(:first-child) {
+        margin-top: 80px;
+    }
+
+    .sports_contents {
+        flex-direction: column;
+        gap: 60px 0;
+    }
+
+    .sports a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sns {
+        margin-top: 120px;
+    }
+
+    .sns_contents {
+        flex-direction: column;
+        margin-top: 32px;
+        gap: 32px 0;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    /* .footer {
+        padding-bottom: 110px;
+    } */
+
+    .footer .container{
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: 60px;
+        gap: 40px 0;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .footer_logo{
+        width: 100%;
+    }
+
+    .footer_right{
+        /* display: block; */
+        /* flex-flow:  row wrap; */
+        /* justify-content: space-around; */
+        gap: 0;
+        /* justify-content: center; */
+    }
+
+    .footer_menu:not(:nth-child(3)) {
+        margin-right: 0px;
+    }
+
+    .footer_menu{
+        width: 30%;
+        float: left;
+    }
+    .footer_menu:nth-child(3){
+        display: none;
+    }
 }
 
 @media screen and (max-width:767px) {
 
-    #nav{
-        padding: 16px 20px;
+    .gnb {
+        padding: 18px 16px;
     }
+
     .container {
         max-width: 92%;
         margin: 0 auto;
     }
 
-    h1 img {
+    #nav h1 img {
         width: 100px;
+    }
+
+    .gnb_toggle-btn {
+        font-size: 1.25rem;
     }
 
     #section {
@@ -638,71 +935,42 @@ body {
         height: 525px;
     }
 
-    .main_banner {
+    .banner a .main_banner {
         height: 525px;
     }
 
-    .main_banner:first-child .main_banner_description {
-        display: flex;
-        flex-flow: column;
-        align-content: space-around;
-    }
-
-    .main_banner:first-child {
+    a:first-child .main_banner {
         background: url(../images/main_banner_mobile.png) center/cover no-repeat;
     }
 
-    .main_banner:last-child {
+    a:nth-child(2) .main_banner {
         background: url(../images/main_banner2_mobile.png) center/cover no-repeat;
     }
 
-    .main_banner_description1 {
-        position: absolute;
-        top: 70%;
-        left: 10%;
+    a .main_banner .main_banner_description {
+        padding-left: 16px;
+        padding-top: 400px;
     }
 
-    .main_banner_description1 p {
-        font-size: 1.875rem;
-        color: #fff;
-        font-weight: 400;
-        line-height: 40px;
-        margin-bottom: 12px;
-    }
-
-    .main_banner_description1 a {
-        padding: 6px 23px;
-        background-color: #000;
-        color: #fff;
-    }
-
-
-    .main_banner_description2 {
-        position: absolute;
-        top: 70%;
-        left: 10%;
-    }
-
-    .main_banner_description2 p:first-child {
-        color: #067456;
+    a:nth-child(1) .main_banner_description h2 {
         font-size: 0.75rem;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
     }
 
-    .main_banner_description2 p:nth-child(2) {
+    a:nth-child(1) .main_banner_description p {
         font-size: 1rem;
         line-height: 24px;
-        margin-bottom: 14px;
-    }
-
-    .main_banner_description2 p:nth-child(2) span {
-        font-weight: 500;
-    }
-
-    .main_banner_description2 a {
         color: #fff;
-        padding: 6px 20px;
-        background-color: #000;
+    }
+
+    a:nth-child(2) .main_banner .main_banner_description p:first-child {
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+
+    a:nth-child(2) .main_banner .main_banner_description p:last-child {
+        font-size: 1rem;
+        line-height: 24px;
     }
 
     .best_item ul {
@@ -711,6 +979,11 @@ body {
         justify-content: space-between;
         /* gap: 24px; */
         gap: 24px 0;
+    }
+
+    .best {
+        justify-content: center;
+        padding-left: 0px;
     }
 
     .best_title {
@@ -745,4 +1018,131 @@ body {
         font-size: 1rem;
         font-weight: 500;
     }
+
+    .center_banner {
+        height: 62px;
+        margin-top: 80px;
+    }
+
+    .center_banner a .container {
+        height: 62px;
+        padding: 16px 20px;
+    }
+
+    .center_banner h2 {
+        font-size: 1rem;
+    }
+
+    .center_banner p {
+        font-size: 0.625rem;
+    }
+
+
+    .sale {
+        margin-top: 80px;
+        padding-left: 0;
+    }
+
+    .sale_title {
+        align-items: center;
+    }
+
+    .sale_title h2 {
+        font-size: 1.5rem;
+    }
+
+    .sale_description {
+        padding-left: 0;
+        width: 48%;
+    }
+
+    .sale_description h2 {
+        font-size: 0.75rem;
+    }
+    .sale_description p {
+        font-size: 1.25rem;
+    }
+
+    .promotion .container{
+        display: flex;
+        flex-flow: column wrap;
+        /* position: relative; */
+        gap: 16px 0;
+        padding-bottom: 20px;
+    }
+    .promotion .container img{
+       width: 100%;
+       padding-top: 0px;
+    }
+
+    .collection{
+        margin-top: 80px;
+    }
+    .collection_title h2{
+        font-size: 1.875rem;
+    }
+    .collection_description{
+        padding-left: 0;
+    }
+    .collection_description h2{
+        font-size: 1.5rem;
+    }
+    .collection_description p{
+        font-size: 1rem;
+    }
+    .collection_description a{
+        font-size: 0.75rem;
+    }
+
+    .sns{
+        margin-top: 80px;
+    }
+
+    .sns h2{
+        padding-left: 0;
+    }
+
+    .insta{
+        padding-left: 20px;
+    }
+    .insta img{
+        width: 30%;
+    }
+
+    .footer{
+        height: 100%;
+    }
+    .footer .container{
+        display: flex;
+        flex-flow: column wrap;
+        padding-top: 60px;
+        gap: 40px 0;
+        height: 100%;
+    }
+
+    .footer_logo{
+        width: 100%;
+    }
+
+    .footer_right{
+        display: block;
+        /* flex-flow:  row wrap; */
+        /* justify-content: space-around; */
+        gap: 0;
+        justify-content: center;
+    }
+
+    .footer_menu:not(:nth-child(3)) {
+        margin-right: 0px;
+    }
+
+    .footer_menu{
+        width: 30%;
+        float: left;
+    }
+    .footer_menu:nth-child(3){
+        display: none;
+    }
+
+
 }

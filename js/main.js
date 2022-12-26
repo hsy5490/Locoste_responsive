@@ -12,7 +12,7 @@ document.addEventListener('scroll', () => {
 });
 
 // slider banner
-const main_bnr = document.querySelectorAll('.banner .main_banner')
+const main_bnr = document.querySelectorAll('.banner a')
 let num = 0
 console.log(main_bnr)
 setInterval(function(){
@@ -40,25 +40,6 @@ tabs.forEach(tab => {
     tab.classList.add('active')
   })
 })
-
-// video play
-const video = $('#l005_video');
-const btn = $('#l005_btn');
-btn.click(function(){
-    /* 초기값 = video(paused) | button(play) */
-    // video가 paused 상태면
-    if(video.get(0).paused){
-        // play() = Video Play
-        $('#l005_video').get(0).play();
-        // button paused 폰트어썸으로 바꿔라
-        $('#l005_btn').html('<i class="fa fa-pause-circle-o" aria-hidden="true"></i>');
-    }else{
-        // pause() = Video Pause
-        $('#l005_video').get(0).pause();
-        // button play 폰트어썸으로 바꿔라
-        $('#l005_btn').html('<i class="fa fa-play-circle-o" aria-hidden="true"></i>');
-    }
-});
 
 // hamburger
 const menu = document.querySelector('.gnb_center');
